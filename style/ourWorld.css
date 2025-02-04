@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    /* height: 100%; */
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "MessinaSansWeb", sans-serif;
+    background-color: rgb(16, 16, 16);
+    z-index: -5;
+}
+
+main {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    background-color: rgb(16, 16, 16);
+}
+
+@font-face {
+    font-family: "MessinaSansWeb";
+    src: url("https://db.onlinewebfonts.com/t/c0622b61ddd8c0f0c968784eb3439516.eot");
+    src: url("https://db.onlinewebfonts.com/t/c0622b61ddd8c0f0c968784eb3439516.eot?#iefix") format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/c0622b61ddd8c0f0c968784eb3439516.woff2") format("woff2"),
+        url("https://db.onlinewebfonts.com/t/c0622b61ddd8c0f0c968784eb3439516.woff") format("woff"),
+        url("https://db.onlinewebfonts.com/t/c0622b61ddd8c0f0c968784eb3439516.ttf") format("truetype"),
+        url("https://db.onlinewebfonts.com/t/c0622b61ddd8c0f0c968784eb3439516.svg#MessinaSansWeb") format("svg");
+}
+
+.disc-world-header {
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+
+}
+
+.disc-world-header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 3rem;
+    background: transparent;
+    /* transition: all 0.3s ease-in-out; */
+}
+
+.disc-world-header-nav-links {
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+    /* width: 70%; */
+}
+
+.disc-gall-header-nav-menu-option {
+    font-size: 10rem;
+    color: white;
+    /* border: 1px solid white; */
+    padding: 10px 20px;
+    margin-left: 3rem;
+}
+
+.disc-world-header-nav-links div {
+    position: relative;
+    display: inline-block;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+.disc-world-header-nav-span {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.disc-world-header-nav-links a{
+    text-decoration: none;
+    color: white;
+}
+
+.disc-gall-header-nav-menu-option {
+    border: 1px solid white
+}
+
+.disc-gall-header-nav-menu-option p {
+    font-size: 2rem;
+    color: white;
+    padding: 0rem .75rem;
+}
+
+.disc-world-header-nav-links div:hover span {
+    width: 100%;
+}
+
+.disc-world-main-container {
+    margin-top: 12rem;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgb(16, 16, 16);
+    border-bottom: 1px solid rgb(47, 47, 47);
+    position: relative;
+    z-index: 2;
+    transform: translateZ(0);
+}
+
+.disc-world-photo-collage {
+    flex: 1 1 25%;
+    min-width: 250px;
+    color: white;
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
+
+.disc-world-photo-collage img {
+    width: 100%;
+    max-width: 325px;
+    height: 215px;
+    /* height: 15%; */
+    object-fit: cover;
+}
+
+.disc-world-photo-collage-text {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.disc-world-photo-collage-text h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .9rem;
+    /* font-size: 13px; */
+}
+
+.disc-world-photo-collage-text p {
+    color: gray;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.disc-world-footer {
+    margin-top: 3rem;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    /* height: vh; */
+}
+
+.disc-world-footer-container {
+    /* transform: translateY(-100%); */
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding: 4rem;
+}
+
+.disc-world-footer-sub-container {
+    width: 33.33%;
+}
+
+.disc-world-footer-sub-container-links {
+    display: flex;
+}
+
+.disc-world-footer-sub-container-links div {
+    width: 50%;
+}
+
+.disc-world-footer-sub-container-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.disc-world-footer-sub-container-contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.disc-world-footer-sub-container-contact-text p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(198, 195, 195);
+}
+
+.disc-world-footer-sub-container-contact-text h3 {
+    font-weight: 400;
+}
+
+.disc-world-footer-sub-container-links-text {
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 19.2px;
+}
+
+.disc-world-footer-sub-container-links-text h3 {
+    font-weight: 400;
+}
+
+.disc-world-footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.disc-world-footer-bottom h3 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: rgb(176, 176, 176);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: black;
+
+}
+
+
+@media (min-width:481px) and (max-width:768px) {
+    .disc-world-header-nav-links div {
+        font-size: .6rem;
+        padding: 0;
+    }
+
+    .disc-world-header-nav img {
+        width: 12%;
+        padding: 0;
+    }
+
+    .disc-world-header {
+        padding: 0;
+    }
+
+    .disc-world-header-nav {
+        padding: 1rem;
+    }
+
+    .disc-gall-header-nav-menu-option {
+        margin-left: 1rem;
+    }
+
+    .disc-gall-header-nav-menu-option p {
+        font-size: 1.5rem;
+    }
+
+    .disc-gall-main-gallery-text p{
+        font-size: 2rem !important;
+    }
+
+    .disc-gall-footer-sub-container img {
+        width: 10%;
+    }
+
+    .disc-gall-footer-sub-container-contact-text {
+        font-size: .7rem;
+    }
+
+    .disc-gall-footer-sub-container-contact-text p {
+        font-size: .7rem;
+    }
+
+    .disc-gall-footer-sub-container-links>div>p {
+        font-size: .7rem;
+    }
+
+    .disc-gall-footer-bottom {
+        padding: 1rem;
+    }
+
+    .disc-gall-footer-bottom h3 {
+        font-size: .8rem;
+    }
+
+    .disc-gall-footer-container {
+        padding: 1rem;
+    }
+
+    footer {
+        position: relative;
+        z-index: -1;
+        background-color: black;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .disc-world-header-nav-links div:nth-child(1),
+    .disc-world-header-nav-links div:nth-child(2),
+    .disc-world-header-nav-links div:nth-child(3),
+    .disc-world-header-nav-links div:nth-child(4),
+    .disc-world-header-nav-links div:nth-child(5) {
+        display: none;
+    }
+
+    .disc-world-header-nav img {
+        width: 40%;
+    }
+
+    .disc-world-header-nav {
+        padding: 1rem;
+    }
+
+    .disc-gall-header-nav-menu-option {
+        padding: 0rem 0rem;
+        width: 100%;
+
+    }
+
+    .disc-gall-header-nav-menu-option p {
+        /* font-size: 3rem; */
+    }
+
+    .disc-world-main-container {
+        text-align: center;
+        padding: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .disc-world-photo-collage {
+        /* padding: 0; */
+    }
+
+    .disc-world-footer-sub-container-links>div>p {
+        font-size: 1rem;
+    }
+
+    .disc-world-photo-collage img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .disc-world-footer-container {
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    .disc-world-footer-sub-container-contact {
+        margin-top: 3rem;
+    }
+
+    .disc-world-footer {
+        flex-direction: column;
+        gap: 4rem;
+        padding: 0;
+        font-size: .9rem;
+    }
+
+    .disc-world-footer-sub-container img {
+        width: 15%;
+    }
+
+    .disc-world-footer-sub-container-contact {
+        width: 100%;
+    }
+
+    .disc-world-footer-sub-container {
+        width: 100%;
+    }
+
+    .disc-world-footer-sub-container-contact-text-phone {
+        width: 100%;
+    }
+
+    .disc-world-footer-sub-container-contact-text-phone h3 {
+        font-size: 1rem;
+    }
+
+    .disc-world-footer-sub-container-links {
+        margin-top: 4rem;
+    }
+
+    .disc-world-footer-bottom {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .disc-world-footer-bottom h3 {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    footer {
+        position: relative;
+        z-index: -1;
+        background-color: black;
+    }
+}
