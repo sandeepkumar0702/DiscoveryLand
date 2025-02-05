@@ -847,3 +847,8 @@ button:hover {
         padding: 1rem;
     }
 }
+
+
+.disc-exp-footer-sub-container-links-text p:hover{
+    text-decoration: underline;
+}

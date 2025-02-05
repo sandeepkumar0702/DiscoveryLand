@@ -491,3 +491,6 @@ footer{
     }
 }
 
+.disc-gall-footer-sub-container-links p:hover{
+    text-decoration: underline;
+}

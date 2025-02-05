@@ -249,11 +249,23 @@ footer {
 
 
 @media (min-width:481px) and (max-width:768px) {
+    /* .disc-world-photo-collage img {
+        width: 50%;
+        height: 100%;
+    } */
+    .disc-world-photo-collage {
+        flex: 1 1 33%;
+        min-width: 200px;
+        color: white;
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
     .disc-world-header-nav-links div {
         font-size: .6rem;
         padding: 0;
     }
-
+    
     .disc-world-header-nav img {
         width: 12%;
         padding: 0;
@@ -338,10 +350,10 @@ footer {
         width: 100%;
 
     }
-
+/* 
     .disc-gall-header-nav-menu-option p {
-        /* font-size: 3rem; */
-    }
+        /* font-size: 3rem; 
+    } */
 
     .disc-world-main-container {
         text-align: center;
@@ -352,9 +364,9 @@ footer {
         gap: 2rem;
     }
 
-    .disc-world-photo-collage {
-        /* padding: 0; */
-    }
+    /* .disc-world-photo-collage {
+        /* padding: 0; *
+    } */
 
     .disc-world-footer-sub-container-links>div>p {
         font-size: 1rem;
@@ -423,4 +435,8 @@ footer {
         z-index: -1;
         background-color: black;
     }
+}
+
+.disc-world-footer-sub-container-links p:hover{
+    text-decoration: underline;
 }
