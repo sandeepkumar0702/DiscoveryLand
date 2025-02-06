@@ -905,3 +905,11 @@ button:hover {
         z-index: 1;
     }
 }
+
+@media screen and (min-width:120px) and (max-width:480px) {
+    .disc-gall-header-nav-menu-option{
+      position: absolute;
+      right: 5%;
+    }
+    
+  }
